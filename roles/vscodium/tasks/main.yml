@@ -1,0 +1,15 @@
+---
+- name: Install VSCodium
+  pacman:
+    name: vscodium-bin
+    state: present
+
+- name: Install VSCodium Features
+  pacman:
+    name: vscodium-bin-features
+    state: present
+
+- name: Install VSCodium Marketplace
+  pacman:
+    name: vscodium-bin-marketplace
+    state: present
