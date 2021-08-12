@@ -1,0 +1,10 @@
+---
+- name: Install Discord
+  pacman:
+    name: discord
+    state: present
+
+- name: Install BetterDiscord
+  pacman:
+    name: betterdiscordctl-git
+    state: present
