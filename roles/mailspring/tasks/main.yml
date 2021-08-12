@@ -1,0 +1,5 @@
+---
+- name: Install Mailspring
+  pacman:
+    name: mailspring
+    state: present
