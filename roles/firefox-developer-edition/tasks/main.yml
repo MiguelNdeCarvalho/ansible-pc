@@ -1,5 +1,0 @@
----
-- name: Install Firefox Developer Edition
-  pacman:
-    name: firefox-developer-edition
-    state: present

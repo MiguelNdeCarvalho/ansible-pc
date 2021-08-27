@@ -1,5 +1,0 @@
----
-- name: Install ungoogled-chromium
-  pacman:
-    name: ungoogled-chromium
-    state: present
