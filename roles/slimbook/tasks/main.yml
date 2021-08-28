@@ -1,0 +1,12 @@
+---
+- name: Install Slimbook Battery
+  pacman:
+    name: slimbookbattery
+    state: present
+  when: ansible_board_name == "CHANGEME"
+
+- name: Install Slimbook Amd Controller
+  pacman:
+    name: slimbookamdcontroller
+    state: present
+  when: ansible_board_name == "PROX15-AMD"
