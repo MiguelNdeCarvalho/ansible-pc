@@ -1,0 +1,21 @@
+---
+
+- name: Install Microsoft Fonts
+  pacman:
+    name: ttf-ms-fonts
+    state: present
+
+- name: Install Exo2 Font
+  pacman:
+    name: ttf-exo-2
+    state: present
+
+- name: Install Meslo for Powerlevel
+  pacman:
+    name: ttf-meslo-nerd-font-powerlevel10k
+    state: present
+
+- name: Install Google Noto emoji font
+  pacman:
+    name: noto-fonts-emoji
+    state: present
