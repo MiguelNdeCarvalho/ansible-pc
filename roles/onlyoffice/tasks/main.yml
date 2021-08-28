@@ -1,0 +1,5 @@
+---
+- name: Install Onlyoffice
+  pacman:
+    name: onlyoffice-bin
+    state: present
