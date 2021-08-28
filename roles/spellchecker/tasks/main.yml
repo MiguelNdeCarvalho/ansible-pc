@@ -1,0 +1,13 @@
+---
+- name: Install Hunspell
+  pacman:
+    name: hunspell
+    state: present
+
+- name: Install Hunspell Languages
+  pacman:
+    name:
+      - hunspell-en_us
+      - hunspell-en_gb
+      - hunspell-pt_pt
+    state: present
