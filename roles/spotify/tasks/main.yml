@@ -1,0 +1,15 @@
+---
+- name: Install Spotify
+  pacman:
+    name: spotify
+    state: present
+
+- name: Install Spotify AdBlock
+  pacman:
+    name: spotify-adblock
+    state: present
+
+- name: Install Spicetify
+  pacman:
+    name: spicetify-cli
+    state: present
