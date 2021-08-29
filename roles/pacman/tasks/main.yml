@@ -7,7 +7,7 @@
 
 - name: Import Ungoogled-Chromium Repo key
   community.general.pacman_key:
-    id: 02456C79B2FD48BF
+    id: 157C212D66D9B95118C5EDD302456C79B2FD48BF
     url: https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/x86_64/home_ungoogled_chromium_Arch.key
     state: present
 
