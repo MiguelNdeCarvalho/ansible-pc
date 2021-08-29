@@ -2,7 +2,7 @@
 - name: Copy Pacman Conf
   ansible.builtin.template:
     src: pacman.conf.j2
-    dest: /etc/pacman.conf1
+    dest: /etc/pacman.conf
     mode: '644'
 
 - name: Update Pacman Repos
