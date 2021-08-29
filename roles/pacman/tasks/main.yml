@@ -5,6 +5,12 @@
     dest: /etc/pacman.conf
     mode: '644'
 
+- name: Import Ungoogled-Chromium Repo key
+  community.general.pacman_key:
+    id: 02456C79B2FD48BF
+    url: https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/x86_64/home_ungoogled_chromium_Arch.key
+    state: present
+
 - name: Update cache Pacman
   pacman:
     update_cache: yes
