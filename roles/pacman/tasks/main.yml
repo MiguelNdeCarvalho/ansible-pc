@@ -5,6 +5,10 @@
     dest: /etc/pacman.conf1
     mode: '644'
 
+- name: Update Pacman Repos
+  pacman:
+    upgrade: yes
+
 - name: Install Paru
   pacman:
     name: paru
