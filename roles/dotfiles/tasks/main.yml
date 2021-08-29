@@ -12,6 +12,6 @@
   become_user: mike
 
 - name: Deploy dotfiles
-  command: rcup -d /home/mike/.dotfiles
+  command: rcup -fd /home/mike/.dotfiles
   become: yes
   become_user: mike
