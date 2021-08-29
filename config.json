@@ -1,15 +1,17 @@
 {
     "!encryption-password": "password",
-    "audio": "pipewire",
     "bootloader": "systemd-bootctl",
+    "custom-commands": [
+        "cd /root/; git clone -b add-base https://github.com/MiguelNdeCarvalho/ansible-pc.git",
+        "cd /root/ansible-pc/; ansible-playbook -i localhost main.yml; rm -rf /root/ansible-pc/"
+    ],
     "filesystem": "ext4",
     "harddrive": {
         "path": "/dev/sda"
     },
     "hostname": "mike-teste",
     "kernels": [
-        "linux-zen",
-        "linux-lts"
+        "linux"
     ],
     "keyboard-language": "pt-latin1",
     "mirror-region": {
@@ -39,11 +41,11 @@
         "NetworkManager": true
     },
     "ntp": "true",
-    "packages": [],
+    "packages": ["git", "ansible"],
     "profile": null,
     "superusers": {
         "mike": {
-            "!password": "<password>"
+            "!password": "password"
         }
     },
     "sys-enconding": "utf-8",
