@@ -1,6 +1,6 @@
 ---
 - name: Copy Pacman Conf
-  ansible.builtin.template::
+  ansible.builtin.template:
     src: pacman.conf.j2
     dest: /etc/pacman.conf1
     mode: '644'
