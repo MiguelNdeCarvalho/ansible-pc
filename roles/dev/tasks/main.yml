@@ -1,0 +1,51 @@
+---
+- name: Install Programming Languages
+  pacman:
+    name:
+      - go
+      - nodejs
+      - npm
+    state: present
+
+- name: Install Linters
+  pacman:
+    name:
+      - ansible-lint
+      - flake8
+      - shellcheck
+      - terraform-ls-bin
+    state: present
+
+- name: Install Development tools
+  pacman:
+    name:
+      - dbeaver
+      - docker
+      - docker-compose
+      - flux-bin
+      - github-cli
+      - helm
+      - kompose
+      - kubectl
+      - lens-bin
+      - tfenv
+      - virtualbox
+      - virtualbox-host-dkms
+    state: present
+
+- name: Install Providers tools
+  pacman:
+    name:
+      - aws-cli
+      - google-cloud-sdk
+    state: present
+
+- name: Install Cybersecurity tools
+  pacman:
+    name:
+      - nmap
+      - sublist3r-git
+      - traceroute
+      - whois
+      - wireshark-qt
+    state: present
