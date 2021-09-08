@@ -19,3 +19,8 @@
   pacman:
     name: paru
     state: present
+
+- name: Install Packages Utils
+  pacman:
+    name: downgrade
+    state: present
