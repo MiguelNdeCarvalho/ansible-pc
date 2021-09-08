@@ -3,4 +3,5 @@
   roles:
     - pacman
     - xorg
+    - pipewire
     - kde
