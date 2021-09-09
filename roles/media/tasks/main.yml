@@ -44,3 +44,18 @@
   command: spicetify config current_theme Nordify && spicetify apply
   become: yes
   become_user: mike
+
+- name: Install OBS Studio
+  pacman:
+    name: obs-studio
+    state: present
+
+- name: Install Plex Media Player
+  pacman:
+    name: plex-media-player
+    state: present
+
+- name: Install Youtube Music
+  pacman:
+    name: youtube-music-bin
+    state: present
