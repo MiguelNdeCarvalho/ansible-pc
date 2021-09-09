@@ -1,0 +1,46 @@
+---
+- name: Install Spotify and utils
+  pacman:
+    name:
+      - spotify
+      - spotify-adblock
+      - spicetify-cli-git
+    state: present
+
+- name: Fix some permissions of Spotify (1/2)
+  ansible.builtin.file:
+    path: /opt/spotify
+    mode: a+wr
+
+- name: Fix some permissions of Spotify (2/2)
+  ansible.builtin.file:
+    path: /opt/spotify/Apps
+    mode: a+wr
+    recurse: yes
+
+- name: Generate Spicetify config
+  command: spicetify
+  become: yes
+  become_user: mike
+
+- name: Backup Spotify config
+  command: spicetify backup apply enable-devtool
+  become: yes
+  become_user: mike
+
+- name: Spicetify Update
+  command: spicetify update
+  become: yes
+  become_user: mike
+
+- name: Download Nordify Spotify Theme
+  ansible.builtin.git:
+    repo: https://github.com/Tuuuukka/Nordify
+    dest: /home/mike/.config/spicetify/Themes/Nordify
+  become: yes
+  become_user: mike
+
+- name: Apply Spotify Theme
+  command: spicetify config current_theme Nordify && spicetify apply
+  become: yes
+  become_user: mike
