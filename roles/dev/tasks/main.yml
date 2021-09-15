@@ -12,6 +12,7 @@
     name:
       - ansible-lint
       - flake8
+      - pdk
       - shellcheck
       - terraform-ls-bin
     state: present
