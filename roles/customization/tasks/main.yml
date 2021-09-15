@@ -9,14 +9,12 @@
 
 - name: Install Icon Pack
   pacman:
-    name:
-      - flat-remix
+    name: flat-remix
     state: present
 
 - name: Install Cursor Theme
   pacman:
-    name:
-      - volantes-cursors
+    name: volantes-cursors
     state: present
 
 - name: Install Fonts
@@ -26,3 +24,10 @@
       - ttf-exo-2
       - ttf-meslo-nerd-font-powerlevel10k
       - noto-fonts-emoji
+
+- name: Install Plymouth
+  pacman:
+    name:
+      - plymouth
+      - plymouth-theme-arch-logo-new
+    state: present
