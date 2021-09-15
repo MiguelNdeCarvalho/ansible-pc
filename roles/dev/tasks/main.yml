@@ -50,3 +50,11 @@
       - whois
       - wireshark-qt
     state: present
+
+- name: Install VSCodium
+  pacman:
+    name: 
+      - vscodium-bin
+      - vscodium-bin-features
+      - vscodium-bin-marketplace
+    state: present
