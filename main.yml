@@ -5,3 +5,7 @@
     - xorg
     - pipewire
     - kde
+    - customization
+    - media
+    - terminal
+    - dotfiles
