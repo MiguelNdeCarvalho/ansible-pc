@@ -1,0 +1,20 @@
+---
+- name: Install Themes
+  pacman:
+    name:
+      - kvantum-theme-nordic-git
+      - nordic-kde-git
+      - nordic-theme-git
+    state: present
+
+- name: Install Icon Pack
+  pacman:
+    name:
+      - flat-remix
+    state: present
+
+- name: Install Cursor Theme
+  pacman:
+    name:
+      - volantes-cursors
+    state: present
