@@ -18,3 +18,11 @@
     name:
       - volantes-cursors
     state: present
+
+- name: Install Fonts
+  pacman:
+    name:
+      - ttf-ms-fonts
+      - ttf-exo-2
+      - ttf-meslo-nerd-font-powerlevel10k
+      - noto-fonts-emoji
