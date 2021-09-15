@@ -58,3 +58,11 @@
       - vscodium-bin-features
       - vscodium-bin-marketplace
     state: present
+
+- name: Install NeoVIM
+  pacman:
+    name: 
+      - neovim
+      - neovim-plug
+      - neovim-symlinks
+    state: present
