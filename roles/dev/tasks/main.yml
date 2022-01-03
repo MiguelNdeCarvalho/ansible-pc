@@ -1,6 +1,6 @@
 ---
 - name: Install Programming Languages
-  pacman:
+  community.general.pacman:
     name:
       - go
       - nodejs
@@ -8,7 +8,7 @@
     state: present
 
 - name: Install Linters
-  pacman:
+  community.general.pacman:
     name:
       - ansible-lint
       - flake8
@@ -18,7 +18,7 @@
     state: present
 
 - name: Install Development tools
-  pacman:
+  community.general.pacman:
     name:
       - dbeaver
       - docker
@@ -35,14 +35,14 @@
     state: present
 
 - name: Install Providers tools
-  pacman:
+  community.general.pacman:
     name:
       - aws-cli
       - google-cloud-sdk
     state: present
 
 - name: Install Cybersecurity tools
-  pacman:
+  community.general.pacman:
     name:
       - nmap
       - sublist3r-git
@@ -52,7 +52,7 @@
     state: present
 
 - name: Install VSCodium
-  pacman:
+  community.general.pacman:
     name: 
       - vscodium-bin
       - vscodium-bin-features
@@ -60,7 +60,7 @@
     state: present
 
 - name: Install NeoVIM
-  pacman:
+  community.general.pacman:
     name: 
       - neovim
       - neovim-plug

@@ -1,6 +1,6 @@
 ---
 - name: Install Pipewire
-  pacman:
+  community.general.pacman:
     name:
       - pipewire
       - pipewire-alsa

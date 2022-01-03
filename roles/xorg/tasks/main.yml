@@ -1,6 +1,6 @@
 ---
 - name: Install Xorg Base
-  pacman:
+  community.general.pacman:
     name:
       - xorg-server
       - xorg-xinit
@@ -8,7 +8,7 @@
     state: present
 
 - name: Install Intel Drivers
-  pacman:
+  community.general.pacman:
     name:
       - xf86-video-intel
       - mesa
@@ -16,7 +16,7 @@
   when: ansible_board_name == "CHANGEME"
 
 - name: Install AMD Drivers
-  pacman:
+  community.general.pacman:
     name:
       - xf86-video-amdgpu
       - mesa

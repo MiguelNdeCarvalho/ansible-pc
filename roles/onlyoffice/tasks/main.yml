@@ -1,5 +1,5 @@
 ---
 - name: Install Onlyoffice
-  pacman:
+  community.general.pacman:
     name: onlyoffice-bin
     state: present

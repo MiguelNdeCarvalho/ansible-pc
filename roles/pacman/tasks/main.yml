@@ -12,15 +12,15 @@
     state: present
 
 - name: Update cache Pacman
-  pacman:
+  community.general.pacman:
     update_cache: yes
 
 - name: Install Paru
-  pacman:
+  community.general.pacman:
     name: paru
     state: present
 
 - name: Install Packages Utils
-  pacman:
+  community.general.pacman:
     name: downgrade
     state: present

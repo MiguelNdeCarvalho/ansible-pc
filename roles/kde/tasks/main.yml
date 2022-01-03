@@ -1,11 +1,11 @@
 ---
 - name: Install Plasma Base
-  pacman:
+  community.general.pacman:
     name: plasma
     state: present
 
 - name: Install KDE APPs
-  pacman:
+  community.general.pacman:
     name:
       - ark
       - dolphin

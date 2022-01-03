@@ -1,10 +1,10 @@
 ---
 - name: Install ungoogled-chromium
-  pacman:
+  community.general.pacman:
     name: ungoogled-chromium
     state: present
 
 - name: Install Firefox Developer Edition
-  pacman:
+  community.general.pacman:
     name: firefox-developer-edition
     state: present

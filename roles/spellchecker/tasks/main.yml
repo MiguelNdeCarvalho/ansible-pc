@@ -1,11 +1,11 @@
 ---
 - name: Install Hunspell
-  pacman:
+  community.general.pacman:
     name: hunspell
     state: present
 
 - name: Install Hunspell Languages
-  pacman:
+  community.general.pacman:
     name:
       - hunspell-en_us
       - hunspell-en_gb

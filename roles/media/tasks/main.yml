@@ -1,6 +1,6 @@
 ---
 - name: Install Spotify and utils
-  pacman:
+  community.general.pacman:
     name:
       - spotify
       - spotify-adblock
@@ -46,16 +46,16 @@
   become_user: mike
 
 - name: Install OBS Studio
-  pacman:
+  community.general.pacman:
     name: obs-studio
     state: present
 
 - name: Install Plex Media Player
-  pacman:
+  community.general.pacman:
     name: plex-media-player
     state: present
 
 - name: Install Youtube Music
-  pacman:
+  community.general.pacman:
     name: youtube-music-bin
     state: present

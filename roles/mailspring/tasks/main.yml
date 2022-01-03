@@ -1,5 +1,5 @@
 ---
 - name: Install Mailspring
-  pacman:
+  community.general.pacman:
     name: mailspring
     state: present

@@ -1,5 +1,5 @@
 ---
 - name: Install Slack
-  pacman:
+  community.general.pacman:
     name: slack-desktop
     state: present
