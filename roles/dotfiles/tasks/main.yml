@@ -1,6 +1,6 @@
 ---
 - name: Install rcm
-  pacman:
+  community.general.pacman:
     name: rcm
     state: present
 
