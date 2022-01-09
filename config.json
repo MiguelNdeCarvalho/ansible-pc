@@ -9,7 +9,7 @@
     ],
     "!encryption-password": "<root password>",
     "filesystem": "ext4",
-    "harddrive": [
+    "harddrives": [
         "/dev/nvme0n1"
     ],
     "hostname": "mike-laptop",
