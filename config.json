@@ -7,9 +7,9 @@
         "cd /root/ansible-pc/; ansible-playbook -i localhost main.yml; rm -rf /root/ansible-pc/"
     ],
     "filesystem": "ext4",
-    "harddrive": {
-        "path": "/dev/sda"
-    },
+    "harddrive": [
+        "/dev/nvme0n1"
+    ],
     "hostname": "mike-teste",
     "kernels": [
         "linux"
