@@ -1,5 +1,4 @@
 {
-    "!encryption-password": "password",
     "audio": "pipewire",
     "bootloader": "systemd-bootctl",
     "custom-commands": [
@@ -24,11 +23,6 @@
         "git", 
         "ansible"
     ],
-    "superusers": {
-        "mike": {
-            "!password": "password"
-        }
-    },
     "sys-enconding": "utf-8",
     "sys-language": "en_US",
     "timezone": "Europe/Lisbon"
