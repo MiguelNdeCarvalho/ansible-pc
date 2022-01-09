@@ -3,15 +3,12 @@
   community.general.pacman:
     name: rcm
     state: present
+  become: true
 
 - name: Clone dotfiles repo
   ansible.builtin.git:
     repo: https://github.com/MiguelNdeCarvalho/dotfiles.git
     dest: /home/mike/.dotfiles
-  become: yes
-  become_user: mike
 
 - name: Deploy dotfiles
   command: rcup -fd /home/mike/.dotfiles
-  become: yes
-  become_user: mike
