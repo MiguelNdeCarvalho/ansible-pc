@@ -16,7 +16,7 @@
     "kernels": [
         "linux-lts"
     ],
-    "keyboard-language": "pt-latin1",
+    "keyboard-layout": "pt-latin1",
     "mirror-region": "Portugal",
     "nic": {
         "NetworkManager": true,
