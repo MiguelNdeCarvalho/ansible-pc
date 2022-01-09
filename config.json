@@ -20,7 +20,7 @@
     },
     "ntp": "true",
     "packages": [
-        "git", 
+        "git",
         "ansible"
     ],
     "swap": "true",
