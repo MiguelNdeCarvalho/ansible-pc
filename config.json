@@ -20,7 +20,10 @@
         "NetworkManager": true
     },
     "ntp": "true",
-    "packages": ["git", "ansible"],
+    "packages": [
+        "git", 
+        "ansible"
+    ],
     "profile": null,
     "superusers": {
         "mike": {
