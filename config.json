@@ -12,7 +12,7 @@
     ],
     "hostname": "mike-teste",
     "kernels": [
-        "linux"
+        "linux-lts"
     ],
     "keyboard-language": "pt-latin1",
     "mirror-region": {
