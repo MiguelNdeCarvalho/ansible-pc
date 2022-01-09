@@ -1,5 +1,6 @@
 {
     "!encryption-password": "password",
+    "audio": "pipewire",
     "bootloader": "systemd-bootctl",
     "custom-commands": [
         "cd /root/; git clone -b add-base https://github.com/MiguelNdeCarvalho/ansible-pc.git",
