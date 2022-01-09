@@ -23,6 +23,7 @@
         "git", 
         "ansible"
     ],
+    "swap": "true",
     "sys-enconding": "utf-8",
     "sys-language": "en_US",
     "timezone": "Europe/Lisbon"
