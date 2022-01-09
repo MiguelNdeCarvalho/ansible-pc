@@ -1,10 +1,14 @@
 ---
 - hosts: localhost
   roles:
-    - pacman
-    - xorg
-    - kde
-    - customization
-    - media
-    - terminal
+    - role: pacman
+      become: yes
+    - role: xorg
+      become: yes
+    - role: kde
+      become: yes
+    - role: customization
+      become: yes
+    - role: terminal
+      become: yes
     - dotfiles
