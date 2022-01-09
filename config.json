@@ -2,8 +2,10 @@
     "audio": "pipewire",
     "bootloader": "systemd-bootctl",
     "custom-commands": [
-        "cd /root/; git clone -b add-base https://github.com/MiguelNdeCarvalho/ansible-pc.git",
-        "cd /root/ansible-pc/; ansible-playbook -i localhost main.yml; rm -rf /root/ansible-pc/"
+        "cd /home/miguel && git clone -b add-base https://github.com/MiguelNdeCarvalho/ansible-pc.git && chown mike -R /home/miguel/ansible-pc",
+        "sudo -u mike -D /home/miguel/ansible-pc/ ansible-galaxy collection install -r requirements.yml",
+        "sudo -u mike -D /home/miguel/ansible-pc/ ansible-playbook -i localhost main.yml",
+        "rm -rf /home/miguel/ansible-pc"
     ],
     "!encryption-password": "<root password>",
     "filesystem": "ext4",
