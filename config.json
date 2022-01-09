@@ -5,6 +5,7 @@
         "cd /root/; git clone -b add-base https://github.com/MiguelNdeCarvalho/ansible-pc.git",
         "cd /root/ansible-pc/; ansible-playbook -i localhost main.yml; rm -rf /root/ansible-pc/"
     ],
+    "!encryption-password": "<root password>",
     "filesystem": "ext4",
     "harddrive": [
         "/dev/nvme0n1"
@@ -24,6 +25,11 @@
         "ansible"
     ],
     "swap": "true",
+    "!superusers": {
+        "mike": {
+            "!password": "<admin password>"
+        }
+    },
     "sys-enconding": "utf-8",
     "sys-language": "en_US",
     "timezone": "Europe/Lisbon"
