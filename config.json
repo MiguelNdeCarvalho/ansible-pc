@@ -24,7 +24,6 @@
         "git", 
         "ansible"
     ],
-    "profile": null,
     "superusers": {
         "mike": {
             "!password": "password"
