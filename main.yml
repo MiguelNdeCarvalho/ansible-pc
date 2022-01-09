@@ -3,7 +3,6 @@
   roles:
     - pacman
     - xorg
-    - pipewire
     - kde
     - customization
     - media
