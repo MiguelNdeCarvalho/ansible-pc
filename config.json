@@ -1,0 +1,39 @@
+{
+    "audio": "pipewire",
+    "bootloader": "systemd-bootctl",
+    "custom-commands": [
+        "git clone -b add-base https://github.com/MiguelNdeCarvalho/ansible-pc.git /home/mike/ansible-pc && chown mike -R /home/mike/ansible-pc",
+        "sudo -u mike -D /home/mike/ansible-pc/ ansible-galaxy collection install -r requirements.yml",
+        "sudo -u mike -D /home/mike/ansible-pc/ ansible-playbook -i localhost main.yml",
+        "rm -rf /home/mike/ansible-pc"
+    ],
+    "!encryption-password": "<root password>",
+    "filesystem": "ext4",
+    "harddrives": [
+        "/dev/nvme0n1"
+    ],
+    "hostname": "mike-laptop",
+    "kernels": [
+        "linux-lts"
+    ],
+    "keyboard-layout": "pt-latin1",
+    "mirror-region": "Portugal",
+    "nic": {
+        "NetworkManager": true,
+        "nic": "Use NetworkManager (necessary to configure internet graphically in GNOME and KDE)"
+    },
+    "ntp": "true",
+    "packages": [
+        "git",
+        "ansible"
+    ],
+    "swap": "true",
+    "!superusers": {
+        "mike": {
+            "!password": "<admin password>"
+        }
+    },
+    "sys-enconding": "utf-8",
+    "sys-language": "en_US",
+    "timezone": "Europe/Lisbon"
+}

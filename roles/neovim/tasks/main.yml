@@ -1,15 +1,15 @@
 ---
 - name: Install Neovim
-  pacman:
+  community.general.pacman:
     name: neovim
     state: present
 
 - name: Install Neovim Symlink
-  pacman:
+  community.general.pacman:
     name: neovim-symlinks
     state: present
 
 - name: Install Neovim Python Client
-  pacman:
+  community.general.pacman:
     name: python-pynvim
     state: present

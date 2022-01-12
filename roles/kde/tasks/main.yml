@@ -1,0 +1,31 @@
+---
+- name: Install Plasma Base
+  community.general.pacman:
+    name: plasma
+    state: present
+
+- name: Install KDE APPs
+  community.general.pacman:
+    name:
+      - ark
+      - dolphin
+      - dolphin-plugins
+      - gwenview
+      - kate
+      - kcalc
+      - kcolorchooser
+      - kdeconnect
+      - kdenetwork-filesharing
+      - kmail
+      - kmail-account-wizard	
+      - kompare
+      - konsole
+      - korganizer
+      - ktorrent
+      - okular
+      - partitionmanager
+      - plasma-wayland-session
+      - print-manager
+      - sddm
+      - spectacle
+    state: present

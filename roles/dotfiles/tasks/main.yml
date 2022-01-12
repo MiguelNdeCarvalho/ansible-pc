@@ -1,0 +1,14 @@
+---
+- name: Install rcm
+  community.general.pacman:
+    name: rcm
+    state: present
+  become: true
+
+- name: Clone dotfiles repo
+  ansible.builtin.git:
+    repo: https://github.com/MiguelNdeCarvalho/dotfiles.git
+    dest: /home/mike/.dotfiles
+
+- name: Deploy dotfiles
+  command: rcup -fd /home/mike/.dotfiles

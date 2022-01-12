@@ -1,0 +1,33 @@
+---
+- name: Install Themes
+  community.general.pacman:
+    name:
+      - kvantum-theme-nordic-git
+      - nordic-kde-git
+      - nordic-theme-git
+    state: present
+
+- name: Install Icon Pack
+  community.general.pacman:
+    name: flat-remix
+    state: present
+
+- name: Install Cursor Theme
+  community.general.pacman:
+    name: volantes-cursors
+    state: present
+
+- name: Install Fonts
+  community.general.pacman:
+    name:
+      - ttf-ms-fonts
+      - ttf-exo-2
+      - ttf-meslo-nerd-font-powerlevel10k
+      - noto-fonts-emoji
+
+- name: Install Plymouth
+  community.general.pacman:
+    name:
+      - plymouth
+      - plymouth-theme-arch-logo-new
+    state: present

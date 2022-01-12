@@ -1,0 +1,68 @@
+---
+- name: Install Programming Languages
+  community.general.pacman:
+    name:
+      - go
+      - nodejs
+      - npm
+    state: present
+
+- name: Install Linters
+  community.general.pacman:
+    name:
+      - ansible-lint
+      - flake8
+      - pdk
+      - shellcheck
+      - terraform-ls-bin
+    state: present
+
+- name: Install Development tools
+  community.general.pacman:
+    name:
+      - dbeaver
+      - docker
+      - docker-compose
+      - flux-bin
+      - github-cli
+      - helm
+      - kompose
+      - kubectl
+      - lens-bin
+      - tfenv
+      - virtualbox
+      - virtualbox-host-dkms
+    state: present
+
+- name: Install Providers tools
+  community.general.pacman:
+    name:
+      - aws-cli
+      - google-cloud-sdk
+    state: present
+
+- name: Install Cybersecurity tools
+  community.general.pacman:
+    name:
+      - nmap
+      - sublist3r-git
+      - traceroute
+      - whois
+      - wireshark-qt
+    state: present
+
+- name: Install VSCodium
+  community.general.pacman:
+    name: 
+      - vscodium-bin
+      - vscodium-bin-features
+      - vscodium-bin-marketplace
+    state: present
+
+- name: Install NeoVIM
+  community.general.pacman:
+    name: 
+      - neovim
+      - neovim-plug
+      - neovim-symlinks
+    state: present

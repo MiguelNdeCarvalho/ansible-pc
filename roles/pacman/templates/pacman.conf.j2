@@ -1,0 +1,37 @@
+[options]
+HoldPkg = pacman glibc
+Architecture = auto
+Color
+CheckSpace
+ParallelDownloads = 3
+SigLevel    = Required DatabaseOptional
+LocalFileSigLevel = Optional
+
+[core]
+Include = /etc/pacman.d/mirrorlist
+
+[extra]
+Include = /etc/pacman.d/mirrorlist
+
+[community]
+Include = /etc/pacman.d/mirrorlist
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+
+[miguelndecarvalho-repo]
+SigLevel = Optional TrustAll
+Server = https://repo.miguelndecarvalho.pt/
+
+[home_ungoogled_chromium_Arch]
+SigLevel = Required TrustAll
+Server = https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/$arch
+
+{% if ansible_board_name == "PROX15-AMD" %}
+[liquorix]
+Server = https://liquorix.net/archlinux/$repo/$arch
+{% elif ansible_board_name == "CHANGEME"%}
+[home_metakcahura_kernel_Arch_Extra_standard]
+SigLevel = Never
+Server = http://download.opensuse.org/repositories/home:/metakcahura:/kernel/Arch_Extra_standard/$arch
+{% endif %}

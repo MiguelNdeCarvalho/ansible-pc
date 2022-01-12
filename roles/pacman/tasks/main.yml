@@ -1,0 +1,26 @@
+---
+- name: Copy Pacman Conf
+  ansible.builtin.template:
+    src: pacman.conf.j2
+    dest: /etc/pacman.conf
+    mode: '644'
+
+- name: Import Ungoogled-Chromium Repo key
+  community.general.pacman_key:
+    id: 157C212D66D9B95118C5EDD302456C79B2FD48BF
+    url: https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/x86_64/home_ungoogled_chromium_Arch.key
+    state: present
+
+- name: Update cache Pacman
+  community.general.pacman:
+    update_cache: yes
+
+- name: Install Paru
+  community.general.pacman:
+    name: paru
+    state: present
+
+- name: Install Packages Utils
+  community.general.pacman:
+    name: downgrade
+    state: present

@@ -1,0 +1,15 @@
+---
+- name: Install ZSH
+  community.general.pacman:
+    name: zsh
+    state: present
+
+- name: Install OMZ
+  community.general.pacman:
+    name: oh-my-zsh-git
+    state: present
+
+- name: Install Powerlevel10K Theme
+  community.general.pacman:
+    name: zsh-theme-powerlevel10k
+    state: present
